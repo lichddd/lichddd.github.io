@@ -60,3 +60,40 @@ console.log('                  但愿老死电脑间，不愿鞠躬老板前；'
 console.log('                  奔驰宝马贵者趣，公交自行程序员。');
 console.log('                  别人笑我忒疯癫，我笑自己命太贱；');
 console.log('                  不见满街漂亮妹，哪个归得程序员？');
+
+
+
+$().ready(function() {
+	$('#fullpage').fullpage({
+		sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+		menu: '#menu',
+		'navigation': true,
+		'navigationPosition': 'right',
+		'navigationTooltips': ['首页', 'GaliGali', '...', '...'],
+		scrollingSpeed: 1000,
+		'afterLoad': function(anchorLink, index) {
+			if (index == 2) {
+				start_link();
+			}
+		}
+		,
+		'onLeave': function(index, nextIndex, direction) {
+			if (index == 2) {
+				
+				stop_link();
+//				pauseJS(800);
+				
+							}
+		}
+	});
+
+});
+
+
+function pauseJS(timeInMilliS) {
+var date = new Date();
+var curDate = null;
+do { curDate = new Date(); }
+while(curDate-date < timeInMilliS);
+}

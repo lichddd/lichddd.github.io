@@ -1,0 +1,30 @@
+#menubox
+{
+  position: fixed;
+  top: 0;
+  height: 40px;
+  z-index: 70;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  
+}
+#menu
+{
+	margin: 0px;
+	padding: 0px;
+}
+#menu li
+{
+	display: inline-block;
+	/*opacity: 0.75;*/
+	/*border-radius: 10px;*/
+	margin: 10px;
+}
+#menu li a
+{
+	text-decoration: none;
+	color: black;
+}
